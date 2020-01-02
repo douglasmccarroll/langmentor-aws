@@ -23,7 +23,7 @@ Outputs:
 Resources:
   ReportUserActivityFunction:
     Properties:
-      CodeUri: s3://com.langcollab.play-002.langmentor-app-sam/8f602e16870472e37f33c981940fc16a
+      CodeUri: s3://com.langcollab.play-002.langmentor-app-sam/41cdd1157409935913dc57afc5179ee9
       Environment:
         Variables:
           TABLE_NAME:

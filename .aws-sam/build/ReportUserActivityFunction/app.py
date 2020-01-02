@@ -67,6 +67,27 @@ def lambda_handler(event, context):
     if "lessonVersion_Previous" in jsonBody:
         lessonVersion_Previous = jsonBody["lessonVersion_Previous"]
         itemForDb['lessonVersion_Previous'] = lessonVersion_Previous
+    if "project" in jsonBody:
+        project = jsonBody["project"]
+        itemForDb['project'] = project
+    if "userDepartment" in jsonBody:
+        userDepartment = jsonBody["userDepartment"]
+        itemForDb['userDepartment'] = userDepartment
+    if "userGroup" in jsonBody:
+        userGroup = jsonBody["userGroup"]
+        itemForDb['userGroup'] = userGroup
+    if "userFirstName" in jsonBody:
+        userFirstName = jsonBody["userFirstName"]
+        itemForDb['userFirstName'] = userFirstName
+    if "userLastName" in jsonBody:
+        userLastName = jsonBody["userLastName"]
+        itemForDb['userLastName'] = userLastName
+    if "userOrganization" in jsonBody:
+        userOrganization = jsonBody["userOrganization"]
+        itemForDb['userOrganization'] = userOrganization
+    if "userSubgroup" in jsonBody:
+        userSubgroup = jsonBody["userSubgroup"]
+        itemForDb['userSubgroup'] = userSubgroup
 
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(os.environ.get('TABLE_NAME'))
